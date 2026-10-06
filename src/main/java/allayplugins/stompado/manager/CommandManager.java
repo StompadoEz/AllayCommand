@@ -14,9 +14,10 @@ import allayplugins.stompado.resolver.gamemode.GameModeResolver;
 import allayplugins.stompado.resolver.numbers.DoubleResolver;
 import allayplugins.stompado.resolver.numbers.IntegerResolver;
 import allayplugins.stompado.resolver.numbers.LongResolver;
-import allayplugins.stompado.resolver.player.PlayerResolver;
+import allayplugins.stompado.resolver.target.TargetResolver;
 import allayplugins.stompado.resolver.result.ResolveResult;
 import allayplugins.stompado.resolver.strings.StringResolver;
+import allayplugins.stompado.target.Target;
 import allayplugins.stompado.text.Messages;
 import org.bukkit.GameMode;
 import org.bukkit.command.CommandSender;
@@ -294,7 +295,7 @@ public class CommandManager {
     private void registerDefaultResolvers() {
         resolverRegistry.register(String.class, new StringResolver());
 
-        resolverRegistry.register(Player.class, new PlayerResolver());
+        resolverRegistry.register(Target.class, new TargetResolver());
 
         resolverRegistry.register(Integer.class, new IntegerResolver());
         resolverRegistry.register(int.class, new IntegerResolver());
